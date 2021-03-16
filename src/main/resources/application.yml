@@ -1,0 +1,15 @@
+notifier:
+  email:
+    groups:
+      DEV: ["cssrumi@gmail.com"]
+      PO: ["corlowski@wsb.gda.pl"]
+
+quarkus:
+  mailer:
+    auth-methods: DIGEST-MD5 CRAM-SHA256 CRAM-SHA1 CRAM-MD5 PLAIN LOGIN
+    from: airqnotifications@gmail.com
+    host: smtp.gmail.com
+    port: 587
+    start-tls: REQUIRED
+    username: airqnotifications@gmail.com
+    mock: false
