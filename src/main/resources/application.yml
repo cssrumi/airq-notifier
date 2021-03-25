@@ -5,6 +5,8 @@ notifier:
       PO: ["corlowski@wsb.gda.pl"]
 
 quarkus:
+  http:
+    port: 8098
   mailer:
     auth-methods: DIGEST-MD5 CRAM-SHA256 CRAM-SHA1 CRAM-MD5 PLAIN LOGIN
     from: airqnotifications@gmail.com
@@ -13,3 +15,11 @@ quarkus:
     start-tls: REQUIRED
     username: airqnotifications@gmail.com
     mock: false
+  vertx:
+    prefer-native-transport: true
+
+notification:
+  enabled: false
+
+failure:
+  enable-notifications: false
