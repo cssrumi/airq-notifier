@@ -24,6 +24,7 @@ class EmailReceiverProvider {
                         .stream()
                         .filter(entry -> groups.contains(entry.getKey()))
                         .flatMap(entry -> Arrays.stream(entry.getValue()))
+                        .distinct()
                         .toArray(String[]::new);
     }
 
